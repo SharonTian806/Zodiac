@@ -1,0 +1,97 @@
+<html>
+ <head>
+   <title> Zodiac Notes </title>
+    <style>
+      body {
+    border-bottom: double white;
+  }
+    button {
+      padding: 12px 28px;
+      background-color: #AAA6F7;
+      outline-color: black;
+      border-radius: 25px;
+    }
+
+     button:hover {
+      background-color: white;
+      color: black;
+    }
+
+        h2 {
+          color: white;
+          font-family: monospace;
+          font-size: 30px;
+          text-decoration: underline;
+          text-align: center;
+          outline: groove;
+          outline-color: white;
+        }
+        body {
+          background-image: url("starrysky.jpg");
+          }
+
+    </style>
+     <script>
+      function fortune()
+      {
+        //Logical OR (||)
+        //Logical AND (&&)
+        //Cond1 Cond2 Result
+        //May 12 is Taurus (4/20 - 5/20)
+        var month = 5;
+        var day = 12;
+        //Taurus (Apr. 20 - May 20)
+        if(month == 4  ||  month == 5)
+        //Cond1             Cond2
+        {
+          //You KNOW you are in the correct month for Taurus
+          if( (day <= 20  &&  day >= 30)  ||  (day >= 1  &&  day <= 20) )
+          {
+            document.getElementById("message").innerhtml = "You are a Taurus.";
+            document.getElementById("symbol").innerHTML = "<img src = 'taurus.png'>";
+          }
+
+          var month = 3;
+          var day = 21;
+          //Aries (Mar. 21 - Apr. 20)
+          if(month == 3  ||  month == 4)
+          {
+            if( (day <= 21  &&  day >= 30)  ||  (day >= 1  &&  day <= 20) )
+            {
+              document.getElementById("message").innerhtml = "You are an Aries.";
+              document.getElementById("symbol").innerHTML = "<img src = 'aries.png'>";
+            }
+
+            var month = 5;
+            var day = 21;
+            //Gemini (May 21 - June 20)
+            if(month == 4  ||  month == 5)
+            {
+              if( (day <= 21  &&  day >= 31)  ||  (day >= 1  &&  day <= 20)
+              {
+                document.getElementById("message").innerhtml = "You are a Gemini.";
+                document.getElementById("symbol").innerHTML = "<img src = 'gemini.png'>";
+              }
+
+              var month = 1;
+              var day = 20;
+              //Aquarius (Jan. 20 - Feb. 18)
+              if(month == 1  ||  month == 2)
+              {
+                if( (day <= 20  &&  day >= 31)  ||  (day >= 1  &&  day <= 18)
+                {
+                  document.getElementById("message").innerhtml = "You are a Gemini.";
+                  document.getElementById("symbol").innerHTML = "<img src = 'gemini.png'>";
+                }
+        </script>
+      </head>
+
+  <body>
+    <h2> Horoscope </h2>
+    <input type = "text" value = "Month">
+    <input type = "text" value = "Day">
+    <input type = "button" id = "button" value = "SUBMIT" onclick = "fortune()">
+    <span id = "symbol"></span>
+    <span id = "message"></span>
+   </body>
+</html>
